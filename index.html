@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SmartBank</title>
+    <link rel="stylesheet" href="/dist/output.css" />
+    <script defer src="/index.js"></script>
+  </head>
+  <body class="bg-white w-screen h-full overflow-x-hidden">
+    <header
+      class="w-full max-w-[1440px] fixed top-0 left-0 r-0 border-b border-gray-300 z-[99] bg-white"
+    >
+      <nav
+        class="md:container mx-auto md:w-4/5 w-[90%] flex items-center justify-between py-4"
+      >
+        <img class="hidden lg:inline-block" src="/Resources/Logo.svg" alt="" />
+        <img class="inline-block lg:hidden" src="/Resources/Logo2.svg" alt="" />
+        <ul class="hidden lg:flex items-center gap-4 font-semibold text-base">
+          <li><a class="" href="#">Product</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Log in</a></li>
+          <li>
+            <a class="bg-primaryColor py-3 px-6 text-white rounded-lg" href="#"
+              >Get Started</a
+            >
+          </li>
+        </ul>
+        <div
+          class="menu block absolute top-0 right-full w-full h-screen bg-white mx-auto pt-14 lg:hidden"
+        >
+          <ul class="">
+            <li class="w-[90%] mx-auto">
+              <a class="nav_link" href="#">Product</a>
+            </li>
+            <li class="w-[90%] mx-auto">
+              <a class="nav_link" href="#">Pricing</a>
+            </li>
+            <li class="w-[90%] mx-auto">
+              <a class="nav_link" href="#">About</a>
+            </li>
+            <li class="w-[90%] mx-auto">
+              <a class="nav_link" href="#">Use Cases</a>
+            </li>
+            <li class="w-[90%] mx-auto">
+              <a class="nav_link" href="#">Log in</a>
+            </li>
+            <li class="w-[90%] mx-auto mt-20">
+              <a
+                class="inline-block bg-primaryColor w-full py-4 text-white rounded-xl text-center"
+                href="#"
+                >Get Started</a
+              >
+            </li>
+          </ul>
+          <p class="text-center text-sm mt-4">no credit card required</p>
+        </div>
+        <button
+          class="hamburger lg:hidden w-6 h-6 relative bg-transparent cursor-pointer block appearance-none outline-none border-none"
+        >
+          <span class="bar"></span>
+        </button>
+      </nav>
+    </header>
+    <main class="max-w-[1440px] md:container md:w-4/5 w-[90%] mx-auto">
+      <section
+        id="hero__section"
+        class="flex items-center justify-between flex-col md:flex-row md:h-screen pb-20 pt-32 md:pb-0 md:pt-0"
+      >
+        <div class="hero__section-left flex flex-col gap-5">
+          <h1>Stress less about your money</h1>
+          <p class="leading">
+            Invest spare change, invest while you bank, earn bonus investments,
+            grow your knowledge and more.
+          </p>
+          <div class="store flex items-center gap-4">
+            <a href="#"><img src="/Resources/GooglePlay.svg" alt="" /></a>
+            <a href="#"><img src="/Resources/AppStore.svg" alt="" /></a>
+          </div>
+          <p class="leading flex items-center text-base">
+            4.9/5.0
+            <span class="flex items-center ml-2"
+              ><svg
+                viewBox="0 0 29 28"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M26.2078 11.3711C26.161 11.2269 26.0433 11.1168 25.8965 11.0806L18.9041 9.34665L15.1006 3.20708C15.0207 3.07818 14.8803 3 14.7291 3C14.578 3 14.4375 3.07818 14.3577 3.20708L10.5542 9.34665L3.56177 11.0806C3.41497 11.1168 3.29728 11.2269 3.25046 11.3711C3.20386 11.5154 3.23471 11.674 3.33206 11.7899L7.97384 17.3183L7.4558 24.5293C7.44487 24.6806 7.5129 24.8269 7.63497 24.9163C7.75792 25.0054 7.9174 25.0248 8.05697 24.9677L14.7291 22.2448L21.4013 24.9677C21.4542 24.9894 21.5102 24.9999 21.566 24.9999C21.657 24.9999 21.7471 24.9714 21.8233 24.916C21.9456 24.8269 22.0134 24.6806 22.0024 24.5291L21.4844 17.3181L26.1262 11.7897C26.2235 11.674 26.2544 11.5156 26.2078 11.3711Z"
+                  fill="#FFBC58"
+                />
+              </svg>
+              <svg
+                viewBox="0 0 29 28"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M26.2078 11.3711C26.161 11.2269 26.0433 11.1168 25.8965 11.0806L18.9041 9.34665L15.1006 3.20708C15.0207 3.07818 14.8803 3 14.7291 3C14.578 3 14.4375 3.07818 14.3577 3.20708L10.5542 9.34665L3.56177 11.0806C3.41497 11.1168 3.29728 11.2269 3.25046 11.3711C3.20386 11.5154 3.23471 11.674 3.33206 11.7899L7.97384 17.3183L7.4558 24.5293C7.44487 24.6806 7.5129 24.8269 7.63497 24.9163C7.75792 25.0054 7.9174 25.0248 8.05697 24.9677L14.7291 22.2448L21.4013 24.9677C21.4542 24.9894 21.5102 24.9999 21.566 24.9999C21.657 24.9999 21.7471 24.9714 21.8233 24.916C21.9456 24.8269 22.0134 24.6806 22.0024 24.5291L21.4844 17.3181L26.1262 11.7897C26.2235 11.674 26.2544 11.5156 26.2078 11.3711Z"
+                  fill="#FFBC58"
+                />
+              </svg>
+              <svg
+                viewBox="0 0 29 28"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M26.2078 11.3711C26.161 11.2269 26.0433 11.1168 25.8965 11.0806L18.9041 9.34665L15.1006 3.20708C15.0207 3.07818 14.8803 3 14.7291 3C14.578 3 14.4375 3.07818 14.3577 3.20708L10.5542 9.34665L3.56177 11.0806C3.41497 11.1168 3.29728 11.2269 3.25046 11.3711C3.20386 11.5154 3.23471 11.674 3.33206 11.7899L7.97384 17.3183L7.4558 24.5293C7.44487 24.6806 7.5129 24.8269 7.63497 24.9163C7.75792 25.0054 7.9174 25.0248 8.05697 24.9677L14.7291 22.2448L21.4013 24.9677C21.4542 24.9894 21.5102 24.9999 21.566 24.9999C21.657 24.9999 21.7471 24.9714 21.8233 24.916C21.9456 24.8269 22.0134 24.6806 22.0024 24.5291L21.4844 17.3181L26.1262 11.7897C26.2235 11.674 26.2544 11.5156 26.2078 11.3711Z"
+                  fill="#FFBC58"
+                />
+              </svg>
+              <svg
+                viewBox="0 0 29 28"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M26.2078 11.3711C26.161 11.2269 26.0433 11.1168 25.8965 11.0806L18.9041 9.34665L15.1006 3.20708C15.0207 3.07818 14.8803 3 14.7291 3C14.578 3 14.4375 3.07818 14.3577 3.20708L10.5542 9.34665L3.56177 11.0806C3.41497 11.1168 3.29728 11.2269 3.25046 11.3711C3.20386 11.5154 3.23471 11.674 3.33206 11.7899L7.97384 17.3183L7.4558 24.5293C7.44487 24.6806 7.5129 24.8269 7.63497 24.9163C7.75792 25.0054 7.9174 25.0248 8.05697 24.9677L14.7291 22.2448L21.4013 24.9677C21.4542 24.9894 21.5102 24.9999 21.566 24.9999C21.657 24.9999 21.7471 24.9714 21.8233 24.916C21.9456 24.8269 22.0134 24.6806 22.0024 24.5291L21.4844 17.3181L26.1262 11.7897C26.2235 11.674 26.2544 11.5156 26.2078 11.3711Z"
+                  fill="#FFBC58"
+                />
+              </svg>
+              <svg
+                viewBox="0 0 29 28"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M26.2078 11.3711C26.161 11.2269 26.0433 11.1168 25.8965 11.0806L18.9041 9.34665L15.1006 3.20708C15.0207 3.07818 14.8803 3 14.7291 3C14.578 3 14.4375 3.07818 14.3577 3.20708L10.5542 9.34665L3.56177 11.0806C3.41497 11.1168 3.29728 11.2269 3.25046 11.3711C3.20386 11.5154 3.23471 11.674 3.33206 11.7899L7.97384 17.3183L7.4558 24.5293C7.44487 24.6806 7.5129 24.8269 7.63497 24.9163C7.75792 25.0054 7.9174 25.0248 8.05697 24.9677L14.7291 22.2448L21.4013 24.9677C21.4542 24.9894 21.5102 24.9999 21.566 24.9999C21.657 24.9999 21.7471 24.9714 21.8233 24.916C21.9456 24.8269 22.0134 24.6806 22.0024 24.5291L21.4844 17.3181L26.1262 11.7897C26.2235 11.674 26.2544 11.5156 26.2078 11.3711Z"
+                  fill="#FFBC58"
+                />
+              </svg>
+            </span>
+          </p>
+        </div>
+
+        <div class="hero__section-right">
+          <img src="/Resources/Cartoon Phone.png" alt="" />
+        </div>
+      </section>
+
+      <section
+        id="benefits"
+        class="flex items-center justify-between md:flex-row flex-col gap-6 md:gap-0 mb-20 mt-20 md:pb-24"
+      >
+        <div class="benefit flex flex-col gap-2">
+          <span class="flex items-center gap-2"
+            ><svg
+              viewBox="0 0 51 51"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M46.1184 25.1563C46.1209 36.7543 36.7209 46.1584 25.123 46.1609C13.525 46.1635 4.1209 36.7635 4.11836 25.1655C4.11582 13.5675 13.5158 4.16347 25.1138 4.16094C36.7117 4.1584 46.1158 13.5584 46.1184 25.1563Z"
+                fill="#CCC5FF"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M23.4901 10.2237C23.4898 9.08462 24.441 8.161 25.6146 8.16074C26.7882 8.16048 27.7398 9.08369 27.7401 10.2228L27.7405 12.2853C31.2613 12.2845 34.1161 15.0541 34.1169 18.4714C34.1171 19.6105 33.1659 20.5341 31.9923 20.5343C30.8187 20.5346 29.8671 19.6114 29.8669 18.4723C29.8666 17.3332 28.915 16.41 27.7414 16.4103L23.4914 16.4112C22.3178 16.4115 21.3666 17.3351 21.3669 18.4742L21.3671 19.626C21.3673 20.5138 21.9528 21.3018 22.8206 21.5824L29.759 23.8255C32.3624 24.6671 34.1187 27.0312 34.1193 29.6945L34.1196 30.8464C34.1203 34.2636 31.2668 37.0345 27.7459 37.0353L27.7464 39.0978C27.7466 40.2369 26.7954 41.1605 25.6218 41.1607C24.4482 41.161 23.4966 40.2378 23.4964 39.0987L23.4959 37.0362C19.9751 37.037 17.1203 34.2674 17.1196 30.8501C17.1193 29.711 18.0705 28.7874 19.2441 28.7871C20.4177 28.7869 21.3693 29.7101 21.3696 30.8492C21.3698 31.9883 22.3214 32.9115 23.495 32.9112L27.745 32.9103C28.9186 32.91 29.8698 31.9864 29.8696 30.8473L29.8693 29.6954C29.8691 28.8077 29.2837 28.0196 28.4159 27.7391L21.4775 25.496C18.8741 24.6544 17.1177 22.2903 17.1171 19.627L17.1169 18.4751C17.1161 15.0578 19.9697 12.287 23.4905 12.2862L23.4901 10.2237Z"
+                fill="black"
+              />
+            </svg>
+            <h5>Easy Transactions</h5>
+          </span>
+          <p class="leading">
+            We have an easy to understand application flow for you to use for
+            transactions
+          </p>
+        </div>
+        <div class="benefit flex flex-col gap-3">
+          <span class="flex items-center gap-3"
+            ><svg
+              viewBox="0 0 51 51"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M15.4007 21.1632L11.1785 21.1641L11.1794 25.3459L11.1808 31.6187L11.1813 33.7096C8.84939 33.7101 6.95945 35.5828 6.95996 37.8923L6.96041 39.9832C6.96092 42.2928 8.85168 44.1646 11.1835 44.1641L40.7391 44.1577C43.071 44.1571 44.9609 42.2845 44.9604 39.9749L44.96 37.884C44.9595 35.5745 43.0687 33.7026 40.7368 33.7031L40.7364 31.6122L40.735 25.3395L40.7341 21.1577L36.5119 21.1586L36.5128 25.3404L36.5141 31.6131L36.5146 33.704L32.2924 33.705L32.2919 31.614L32.2905 25.3413L32.2896 21.1595L28.0674 21.1604L28.0683 25.3422L28.0697 31.615L28.0702 33.7059L23.8479 33.7068L23.8475 31.6159L23.8461 25.3432L23.8452 21.1613L19.623 21.1623L19.6239 25.3441L19.6253 31.6168L19.6257 33.7077L15.4035 33.7086L15.403 31.6177L15.4017 25.345L15.4007 21.1632Z"
+                fill="#B3A9FF"
+              />
+              <path
+                d="M6.95508 15.6466C6.95468 13.8217 8.09391 12.197 9.79327 11.5988L24.5699 6.39755C25.4658 6.08221 26.4402 6.08199 27.3362 6.39694L42.1151 11.5918C43.8147 12.1892 44.9547 13.8134 44.9551 15.6383L44.9553 16.8733C44.9559 19.239 43.0659 21.1571 40.7341 21.1577L11.1785 21.1641C8.84663 21.1646 6.95586 19.2473 6.95535 16.8816L6.95508 15.6466Z"
+                fill="black"
+              />
+            </svg>
+
+            <h5>Safe and Reliable</h5>
+          </span>
+          <p class="leading">
+            We have an easy to understand application flow for you to use for
+            transactions
+          </p>
+        </div>
+        <div class="benefit flex flex-col gap-3">
+          <span class="flex items-center gap-3"
+            ><svg
+              viewBox="0 0 51 51"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M13.6001 15.2546C13.5996 12.921 13.5993 11.7542 14.0487 10.8628C14.444 10.0787 15.0749 9.44118 15.851 9.04154C16.7333 8.58721 17.8884 8.58695 20.1986 8.58645L39.9986 8.58212C42.3088 8.58161 43.464 8.58136 44.3464 9.03531C45.1227 9.43461 45.7539 10.0719 46.1495 10.8558C46.5993 11.747 46.5996 12.9138 46.6001 15.2473L46.6026 26.914C46.6032 29.2476 46.6034 30.4143 46.154 31.3057C45.7587 32.0898 45.1278 32.7274 44.3517 33.127C43.4694 33.5814 42.3143 33.5816 40.0041 33.5821L20.2041 33.5864C17.8939 33.587 16.7388 33.5872 15.8563 33.1333C15.08 32.734 14.4488 32.0967 14.0532 31.3128C13.6034 30.4216 13.6032 29.2548 13.6026 26.9212L13.6001 15.2546Z"
+                fill="#B3A9FF"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M5.05068 19.8648C4.76086 20.4396 4.65805 21.129 4.62172 22.172C4.60209 22.7354 4.59228 23.0171 4.70174 23.2479C4.79586 23.4464 4.961 23.6192 5.1541 23.7211C5.37865 23.8397 5.67022 23.8396 6.25334 23.8395L35.9506 23.833C36.5337 23.8329 36.8252 23.8328 37.0498 23.7141C37.2428 23.6121 37.4079 23.4393 37.5019 23.2408C37.6113 23.0099 37.6013 22.7282 37.5815 22.1648C37.5447 21.1219 37.4416 20.4325 37.1515 19.8578C36.7558 19.0738 36.1247 18.4366 35.3484 18.0373C34.4659 17.5833 33.3108 17.5836 31.0006 17.5841L11.2006 17.5884C8.89037 17.5889 7.73526 17.5892 6.85297 18.0435C6.07689 18.4431 5.44599 19.0807 5.05068 19.8648ZM37.6032 29.666C37.6031 29.0826 37.603 28.7909 37.4906 28.5681C37.3917 28.3721 37.2339 28.2128 37.0398 28.113C36.8192 27.9995 36.5304 27.9995 35.9529 27.9997L6.25286 28.0061C5.67531 28.0063 5.38653 28.0063 5.16596 28.1199C4.97194 28.2198 4.81421 28.3792 4.71539 28.5752C4.60304 28.7981 4.6031 29.0898 4.60323 29.6732L4.60459 35.9232C4.6051 38.2567 4.60536 39.4235 5.05515 40.3147C5.4508 41.0986 6.08198 41.7359 6.85824 42.1352C7.74073 42.5892 8.89583 42.5889 11.2061 42.5884L31.0061 42.5841C33.3163 42.5836 34.4714 42.5833 35.3537 42.129C36.1297 41.7293 36.7606 41.0918 37.156 40.3077C37.6054 39.4163 37.6051 38.2495 37.6046 35.916L37.6032 29.666Z"
+                fill="black"
+              />
+            </svg>
+
+            <h5>Flexible Payment</h5>
+          </span>
+          <p class="leading">
+            We have an easy to understand application flow for you to use for
+            transactions
+          </p>
+        </div>
+      </section>
+
+      <section
+        id="subscriptions"
+        class="flex items-center justify-between gap-6 md:gap-12 flex-col md:flex-row pb-20 md:pb-0"
+      >
+        <picture>
+          <img
+            class="w-full"
+            src="/Resources/Image-manage-subscriptions 1.png"
+            alt=""
+          />
+        </picture>
+        <div class="subscriptions__text">
+          <h3 class="mb-4">Manage subscriptions smarter, in one place</h3>
+          <div class="subscriptions__text-list flex flex-col gap-4">
+            <span class="flex items-center gap-2"
+              ><svg
+                viewBox="0 0 29 26"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.66667 25.7222L0 15.4959L4.29866 10.9484L9.66667 16.6432L24.7013 0.722168L29 5.26967L9.66667 25.7222Z"
+                  fill="#5A44FE"
+                />
+              </svg>
+              <p class="leading">Organise subscriptions in one place</p>
+            </span>
+            <span class="flex items-center gap-2"
+              ><svg
+                viewBox="0 0 29 26"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.66667 25.7222L0 15.4959L4.29866 10.9484L9.66667 16.6432L24.7013 0.722168L29 5.26967L9.66667 25.7222Z"
+                  fill="#5A44FE"
+                />
+              </svg>
+              <p class="leading">Block unwanted subscriptions easily</p>
+            </span>
+            <span class="flex items-center gap-2"
+              ><svg
+                viewBox="0 0 29 26"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.66667 25.7222L0 15.4959L4.29866 10.9484L9.66667 16.6432L24.7013 0.722168L29 5.26967L9.66667 25.7222Z"
+                  fill="#5A44FE"
+                />
+              </svg>
+              <p class="leading">Never get charged for a trial again</p>
+            </span>
+          </div>
+          <a href="#" class="cta_link"
+            >Get started<svg
+              width="43"
+              height="14"
+              viewBox="0 0 43 14"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M42.1494 7L30.613 0.339423V13.6606L42.1494 7ZM0.149414 8.15365H31.7666V5.84635H0.149414V8.15365Z"
+                fill="#5A44FE"
+              />
+            </svg>
+          </a>
+        </div>
+      </section>
+
+      <section
+        id="track__savings"
+        class="flex items-center justify-between gap-6 md:gap-12 flex-col md:flex-row-reverse pb-20 md:pb-24"
+      >
+        <picture>
+          <img src="/Resources/Image-track-savings 1.png" alt="" />
+        </picture>
+        <div class="track__savings-text md:w-4/5 w-full">
+          <h3 class="mb-4">Track your savings and spending habits</h3>
+          <div class="subscriptions__text-list flex flex-col gap-4">
+            <span class="flex items-center gap-2"
+              ><svg
+                viewBox="0 0 29 26"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.66667 25.7222L0 15.4959L4.29866 10.9484L9.66667 16.6432L24.7013 0.722168L29 5.26967L9.66667 25.7222Z"
+                  fill="#5A44FE"
+                />
+              </svg>
+              <p class="leading">Get up to 1.95% annual interest paid daily</p>
+            </span>
+            <span class="flex items-center gap-2"
+              ><svg
+                viewBox="0 0 29 26"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.66667 25.7222L0 15.4959L4.29866 10.9484L9.66667 16.6432L24.7013 0.722168L29 5.26967L9.66667 25.7222Z"
+                  fill="#5A44FE"
+                />
+              </svg>
+              <p class="leading">Withdraw instantly, any time</p>
+            </span>
+            <span class="flex items-center gap-2"
+              ><svg
+                viewBox="0 0 29 26"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.66667 25.7222L0 15.4959L4.29866 10.9484L9.66667 16.6432L24.7013 0.722168L29 5.26967L9.66667 25.7222Z"
+                  fill="#5A44FE"
+                />
+              </svg>
+              <p class="leading">Fund it your way</p>
+            </span>
+          </div>
+          <a href="#" class="cta_link"
+            >Get started<svg
+              width="43"
+              height="14"
+              viewBox="0 0 43 14"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M42.1494 7L30.613 0.339423V13.6606L42.1494 7ZM0.149414 8.15365H31.7666V5.84635H0.149414V8.15365Z"
+                fill="#5A44FE"
+              />
+            </svg>
+          </a>
+        </div>
+      </section>
+
+      <section
+        class="md:w-4/5 w-full mx-auto steps md:flex-row-reverse mb-20 md:mb-24"
+      >
+        <article class="step my-12">
+          <div class="step_heading text-center mb-10 md:mb-14">
+            <h5>Step 1</h5>
+            <h3>Create an account</h3>
+          </div>
+          <div class="step__content">
+            <picture>
+              <img src="/Resources/Image1.png" alt="" />
+            </picture>
+            <div class="step_content-text">
+              <h3 class="mb-6">You're a few simple steps away</h3>
+              <ul class="list__item">
+                <li>Download our app</li>
+                <li>Sign up or Log in</li>
+                <li>Choose an account to open first</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+        <article class="step my-12">
+          <div class="step_heading text-center mb-10 md:mb-14">
+            <h5>Step 2</h5>
+            <h3>Order your card</h3>
+          </div>
+          <div class="step__content">
+            <picture>
+              <img src="/Resources/3.png" alt="" />
+            </picture>
+            <div class="step_content-text">
+              <h3 class="mb-6">Choose either virtual or physical card</h3>
+              <ul class="list__item">
+                <li>Debit and/or credit cards</li>
+                <li>Virtual instant cards</li>
+                <li>Physical cards</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+        <article class="step my-12">
+          <div class="step_heading text-center mb-10 md:mb-14">
+            <h5>Step 3</h5>
+            <h3>Save money!</h3>
+          </div>
+          <div class="step__content">
+            <picture>
+              <img src="/Resources/Image3.png" alt="" />
+            </picture>
+            <div class="step_content-text">
+              <h3 class="mb-6">Start saving, stop worrying</h3>
+              <ul class="list__item">
+                <li>Best currency rates</li>
+                <li>Low transfer fees</li>
+                <li>Secure payments</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section
+        class="security w-full md:w-[85%] mx-auto grid__item grid items-center gap-8 grid-cols-1 md:grid-cols-2 mb-20 md:mb-24"
+      >
+        <div class="security__content">
+          <h3 class="mb-6">End-to-end security</h3>
+          <p class="leading">
+            Be at peace with our top of the line security systems and trusted
+            partners.
+          </p>
+          <a href="#" class="cta_link"
+            >Get started<svg
+              width="43"
+              height="14"
+              viewBox="0 0 43 14"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M42.1494 7L30.613 0.339423V13.6606L42.1494 7ZM0.149414 8.15365H31.7666V5.84635H0.149414V8.15365Z"
+                fill="#5A44FE"
+              />
+            </svg>
+          </a>
+        </div>
+        <picture>
+          <img src="/Resources/Image-safe.png" alt="" />
+        </picture>
+      </section>
+
+      <section
+        class="grid__item grid items-center gap-8 grid-cols-1 md:grid-cols-2 mb-20 md:mb-24"
+      >
+        <picture class="row-start-2 md:row-start-1 md:col-start-1">
+          <img src="/Resources/wallet.png" alt="" />
+        </picture>
+        <div
+          class="security__content row-start-1 md:row-start-1 md:col-start-2"
+        >
+          <h3 class="mb-6">Simple way to manage your money</h3>
+          <div class="subscriptions__text-list flex flex-col gap-4">
+            <span class="flex items-start gap-4">
+              <svg
+                width="46"
+                height="47"
+                viewBox="0 0 46 47"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4 17.3693C4 14.114 4 12.4864 4.62126 11.243C5.16774 10.1493 6.03973 9.26012 7.11225 8.70286C8.33155 8.06934 9.9277 8.06934 13.12 8.06934H32.88C36.0723 8.06934 37.6685 8.06934 38.8877 8.70286C39.9603 9.26012 40.8323 10.1493 41.3787 11.243C42 12.4864 42 14.114 42 17.3693V29.7693C42 33.0246 42 34.6523 41.3787 35.8957C40.8323 36.9893 39.9603 37.8785 38.8877 38.4358C37.6685 39.0693 36.0723 39.0693 32.88 39.0693H13.12C9.9277 39.0693 8.33155 39.0693 7.11225 38.4358C6.03973 37.8785 5.16774 36.9893 4.62126 35.8957C4 34.6523 4 33.0246 4 29.7693V17.3693Z"
+                  fill="#B3A9FF"
+                />
+                <rect
+                  x="27"
+                  y="26.0693"
+                  width="17"
+                  height="17"
+                  rx="8.5"
+                  fill="#BEFF6C"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M35.5 30.0693C36.1213 30.0693 36.625 30.573 36.625 31.1943V33.4443H38.875C39.4963 33.4443 40 33.948 40 34.5693C40 35.1907 39.4963 35.6943 38.875 35.6943H36.625V37.9443C36.625 38.5657 36.1213 39.0693 35.5 39.0693C34.8787 39.0693 34.375 38.5657 34.375 37.9443V35.6943H32.125C31.5037 35.6943 31 35.1907 31 34.5693C31 33.948 31.5037 33.4443 32.125 33.4443H34.375V31.1943C34.375 30.573 34.8787 30.0693 35.5 30.0693Z"
+                  fill="#5A44FE"
+                />
+                <path
+                  d="M11 29.0693C11 27.9648 11.8954 27.0693 13 27.0693H21C22.1046 27.0693 23 27.9648 23 29.0693V29.0693C23 30.1739 22.1046 31.0693 21 31.0693H13C11.8954 31.0693 11 30.1739 11 29.0693V29.0693Z"
+                  fill="black"
+                />
+                <path d="M4 15.0693H42V19.0693H4V15.0693Z" fill="black" />
+              </svg>
+              <span>
+                <h5>Save as you spend</h5>
+                <p class="text-lg text-gray-600">
+                  Shop with your Smartbank card to save even when you’re
+                  spending
+                </p>
+              </span>
+            </span>
+            <span class="flex items-start gap-4">
+              <svg
+                width="46"
+                height="47"
+                viewBox="0 0 46 47"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M2 15.6861C2 12.6408 2 11.1182 2.67031 9.95501C3.25993 8.93188 4.20076 8.10005 5.35796 7.57874C6.67352 6.98608 8.39568 6.98608 11.84 6.98608H33.16C36.6043 6.98608 38.3265 6.98608 39.642 7.57874C40.7992 8.10005 41.7401 8.93188 42.3297 9.95501C43 11.1182 43 12.6408 43 15.6861V27.2861C43 30.3314 43 31.854 42.3297 33.0172C41.7401 34.0403 40.7992 34.8721 39.642 35.3934C38.3265 35.9861 36.6043 35.9861 33.16 35.9861H11.84C8.39568 35.9861 6.67352 35.9861 5.35796 35.3934C4.20076 34.8721 3.25993 34.0403 2.67031 33.0172C2 31.854 2 30.3314 2 27.2861V15.6861Z"
+                  fill="#B3A9FF"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M3 14.2361C7.52874 14.2361 11.2 10.9901 11.2 6.98608H15.3C15.3 12.9922 9.7931 17.8611 3 17.8611V14.2361ZM27.6 21.4861C27.6 23.4881 25.7644 25.1111 23.5 25.1111C21.2356 25.1111 19.4 23.4881 19.4 21.4861C19.4 19.4841 21.2356 17.8611 23.5 17.8611C25.7644 17.8611 27.6 19.4841 27.6 21.4861ZM44 14.2361C39.4713 14.2361 35.8 10.9901 35.8 6.98608H31.7C31.7 12.9922 37.2069 17.8611 44 17.8611V14.2361ZM11.2 35.9861C11.2 31.982 7.52874 28.7361 3 28.7361V25.1111C9.7931 25.1111 15.3 29.98 15.3 35.9861H11.2ZM35.8 35.9861C35.8 31.982 39.4713 28.7361 44 28.7361V25.1111C37.2069 25.1111 31.7 29.98 31.7 35.9861H35.8Z"
+                  fill="black"
+                />
+                <rect
+                  x="26"
+                  y="23.9861"
+                  width="17"
+                  height="17"
+                  rx="8.5"
+                  fill="#BEFF6C"
+                />
+                <path
+                  d="M33.8325 27.7849C34.0461 27.2716 34.7736 27.2716 34.9871 27.7849L35.9743 30.1577C36.0638 30.3728 36.2655 30.5203 36.4976 30.5404L38.8417 30.7435C39.3785 30.7901 39.609 31.4483 39.2184 31.8194L37.4377 33.5115C37.2762 33.665 37.2086 33.8929 37.2603 34.1096L37.8611 36.6278C37.9902 37.1687 37.4017 37.5961 36.927 37.3063L34.7358 35.9683C34.5357 35.8461 34.284 35.8461 34.0839 35.9683L31.8926 37.3063C31.418 37.5961 30.8295 37.1687 30.9585 36.6278L31.5596 34.1088C31.6112 33.8925 31.544 33.6651 31.383 33.5116L29.6083 31.8185C29.219 31.4471 29.4497 30.7902 29.9858 30.7436L32.3222 30.5405C32.5543 30.5203 32.7559 30.3728 32.8453 30.1578L33.8325 27.7849Z"
+                  fill="#5A44FE"
+                />
+              </svg>
+
+              <span>
+                <h5>Get insider offers</h5>
+                <p class="text-lg text-gray-600">
+                  We’ll fix you up with discounts and cashback on your favorite
+                  brands
+                </p>
+              </span>
+            </span>
+            <span class="flex items-start gap-4">
+              <svg
+                width="46"
+                height="47"
+                viewBox="0 0 46 47"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4 18.2026C4 14.9473 4 13.3196 4.62126 12.0763C5.16774 10.9826 6.03973 10.0934 7.11225 9.53611C8.33155 8.90259 9.9277 8.90259 13.12 8.90259H32.88C36.0723 8.90259 37.6684 8.90259 38.8877 9.53611C39.9603 10.0934 40.8323 10.9826 41.3787 12.0763C42 13.3196 42 14.9473 42 18.2026V30.6026C42 33.8579 42 35.4855 41.3787 36.7289C40.8323 37.8226 39.9603 38.7118 38.8877 39.2691C37.6684 39.9026 36.0723 39.9026 32.88 39.9026H13.12C9.9277 39.9026 8.33155 39.9026 7.11225 39.2691C6.03973 38.7118 5.16774 37.8226 4.62126 36.7289C4 35.4855 4 33.8579 4 30.6026V18.2026Z"
+                  fill="#B3A9FF"
+                />
+                <rect
+                  x="28"
+                  y="26.9026"
+                  width="17"
+                  height="17"
+                  rx="8.5"
+                  fill="#BFFF6C"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M32.3295 34.5776C31.8902 35.0332 31.8902 35.7719 32.3295 36.2275L34.5795 38.5609C35.0188 39.0165 35.7312 39.0165 36.1705 38.5609C36.6098 38.1053 36.6098 37.3666 36.1705 36.911L35.841 36.5693L39.875 36.5693C40.4963 36.5693 41 36.0469 41 35.4026C41 34.7583 40.4963 34.2359 39.875 34.2359L35.841 34.2359L36.1705 33.8942C36.6098 33.4386 36.6098 32.6999 36.1705 32.2443C35.7312 31.7887 35.0188 31.7887 34.5795 32.2443L32.3295 34.5776Z"
+                  fill="#5A44FE"
+                />
+                <path
+                  d="M11 29.9026C11 28.798 11.8954 27.9026 13 27.9026H21C22.1046 27.9026 23 28.798 23 29.9026C23 31.0072 22.1046 31.9026 21 31.9026H13C11.8954 31.9026 11 31.0072 11 29.9026Z"
+                  fill="black"
+                />
+                <path d="M4 15.9026H42V19.9026H4V15.9026Z" fill="black" />
+              </svg>
+
+              <span>
+                <h5>Effortless cashback</h5>
+                <p class="text-lg text-gray-600">
+                  Everytime you spend, you earn cashback. Simple as that!
+                </p>
+              </span>
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="grid grid-cols-1 md:grid-cols-2 gap-8 flex-col md:flex-row mb-20 md:mb-24"
+      >
+        <div class="box p-5 md:p-10 text-white rounded-2xl">
+          <div class="box-top">
+            <h3 class="text-white">Invite friends and get bonuses</h3>
+            <p class="text-lg text-white">
+              Earn 50 GBP for every 3 friends who transfer over 200 GBP.
+            </p>
+          </div>
+          <div class="box-bottom flex items-end">
+            <a href="#" class="cta_link-2"
+              >Get started<svg
+                width="43"
+                height="14"
+                viewBox="0 0 43 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M42.1494 7L30.613 0.339423V13.6606L42.1494 7ZM0.149414 8.15365H31.7666V5.84635H0.149414V8.15365Z"
+                  fill="#fff"
+                />
+              </svg>
+            </a>
+            <picture>
+              <img src="/Resources/chats.png" alt="" />
+            </picture>
+          </div>
+        </div>
+        <div
+          class="box p-5 md:p-10 text-white rounded-2xl flex flex-col justify-between"
+        >
+          <div class="box-top">
+            <h3 class="text-white">Earn cashback and dicounts - get rewards</h3>
+            <p class="text-lg text-white">
+              Excellent rates for exchanging, sending, and spending in 200+
+              countries.
+            </p>
+          </div>
+          <div class="box-bottom flex items-end">
+            <a href="#" class="cta_link-2"
+              >Get started<svg
+                width="43"
+                height="14"
+                viewBox="0 0 43 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M42.1494 7L30.613 0.339423V13.6606L42.1494 7ZM0.149414 8.15365H31.7666V5.84635H0.149414V8.15365Z"
+                  fill="#fff"
+                />
+              </svg>
+            </a>
+            <picture class="mt-[77px] md:mt-0">
+              <img src="/Resources/Goldbar.png" alt="" />
+            </picture>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
