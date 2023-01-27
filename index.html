@@ -6,14 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SmartBank</title>
     <link rel="stylesheet" href="/dist/output.css" />
-    <script defer src="/index.js"></script>
   </head>
   <body class="bg-white w-screen h-full overflow-x-hidden">
     <header
       class="w-full max-w-[1440px] fixed top-0 left-0 r-0 border-b border-gray-300 z-[99] bg-white"
     >
       <nav
-        class="md:container mx-auto md:w-4/5 w-[90%] flex items-center justify-between py-4"
+        class="md:container mx-auto md:w-4/5 w-[90%] flex items-center justify-between py-4 z-index-10"
       >
         <img class="hidden lg:inline-block" src="/Resources/Logo.svg" alt="" />
         <img class="inline-block lg:hidden" src="/Resources/Logo2.svg" alt="" />
@@ -29,7 +28,7 @@
           </li>
         </ul>
         <div
-          class="menu block absolute top-0 right-full w-full h-screen bg-white mx-auto pt-14 lg:hidden"
+          class="menu block absolute top-0 right-full w-full h-screen bg-white mx-auto pt-20 lg:hidden"
         >
           <ul class="">
             <li class="w-[90%] mx-auto">
@@ -67,7 +66,7 @@
     <main class="max-w-[1440px] md:container md:w-4/5 w-[90%] mx-auto">
       <section
         id="hero__section"
-        class="flex items-center justify-between flex-col md:flex-row md:h-screen pb-20 pt-32 md:pb-0 md:pt-0"
+        class="flex items-center justify-between flex-col md:flex-row md:h-screen mb-24 mt-32 md:mb-0 md:mt-0"
       >
         <div class="hero__section-left flex flex-col gap-5">
           <h1>Stress less about your money</h1>
@@ -143,7 +142,7 @@
 
       <section
         id="benefits"
-        class="flex items-center justify-between md:flex-row flex-col gap-6 md:gap-0 mb-20 mt-20 md:pb-24"
+        class="flex items-center justify-between md:flex-row flex-col gap-6 md:gap-0 mb-24 mt-24 md:mb-28"
       >
         <div class="benefit flex flex-col gap-2">
           <span class="flex items-center gap-2"
@@ -226,7 +225,7 @@
 
       <section
         id="subscriptions"
-        class="flex items-center justify-between gap-6 md:gap-12 flex-col md:flex-row pb-20 md:pb-0"
+        class="flex items-center justify-between gap-6 md:gap-12 flex-col md:flex-row mb-24 md:mb-0"
       >
         <picture>
           <img
@@ -297,7 +296,7 @@
 
       <section
         id="track__savings"
-        class="flex items-center justify-between gap-6 md:gap-12 flex-col md:flex-row-reverse pb-20 md:pb-24"
+        class="flex items-center justify-between gap-6 md:gap-12 flex-col md:flex-row-reverse mb-24 md:mb-28"
       >
         <picture>
           <img src="/Resources/Image-track-savings 1.png" alt="" />
@@ -363,7 +362,7 @@
       </section>
 
       <section
-        class="md:w-4/5 w-full mx-auto steps md:flex-row-reverse mb-20 md:mb-24"
+        class="md:w-4/5 w-full mx-auto steps md:flex-row-reverse mb-24 md:mb-28"
       >
         <article class="step my-12">
           <div class="step_heading text-center mb-10 md:mb-14">
@@ -425,7 +424,7 @@
       </section>
 
       <section
-        class="security w-full md:w-[85%] mx-auto grid__item grid items-center gap-8 grid-cols-1 md:grid-cols-2 mb-20 md:mb-24"
+        class="security w-full md:w-[85%] mx-auto grid__item grid items-center gap-8 grid-cols-1 md:grid-cols-2 mb-24 md:mb-28"
       >
         <div class="security__content">
           <h3 class="mb-6">End-to-end security</h3>
@@ -454,7 +453,7 @@
       </section>
 
       <section
-        class="grid__item grid items-center gap-8 grid-cols-1 md:grid-cols-2 mb-20 md:mb-24"
+        class="grid__item grid items-center gap-8 grid-cols-1 md:grid-cols-2 mb-24 md:mb-28"
       >
         <picture class="row-start-2 md:row-start-1 md:col-start-1">
           <img src="/Resources/wallet.png" alt="" />
@@ -466,8 +465,6 @@
           <div class="subscriptions__text-list flex flex-col gap-4">
             <span class="flex items-start gap-4">
               <svg
-                width="46"
-                height="47"
                 viewBox="0 0 46 47"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -506,8 +503,6 @@
             </span>
             <span class="flex items-start gap-4">
               <svg
-                width="46"
-                height="47"
                 viewBox="0 0 46 47"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -546,8 +541,6 @@
             </span>
             <span class="flex items-start gap-4">
               <svg
-                width="46"
-                height="47"
                 viewBox="0 0 46 47"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -589,11 +582,11 @@
       </section>
 
       <section
-        class="grid grid-cols-1 md:grid-cols-2 gap-8 flex-col md:flex-row mb-20 md:mb-24"
+        class="grid grid-cols-1 md:grid-cols-2 gap-8 flex-col md:flex-row mb-24 md:mb-28"
       >
         <div class="box p-5 md:p-10 text-white rounded-2xl">
           <div class="box-top">
-            <h3 class="text-white">Invite friends and get bonuses</h3>
+            <h3 class="text-white mb-4">Invite friends and get bonuses</h3>
             <p class="text-lg text-white">
               Earn 50 GBP for every 3 friends who transfer over 200 GBP.
             </p>
@@ -622,7 +615,9 @@
           class="box p-5 md:p-10 text-white rounded-2xl flex flex-col justify-between"
         >
           <div class="box-top">
-            <h3 class="text-white">Earn cashback and dicounts - get rewards</h3>
+            <h3 class="text-white mb-4">
+              Earn cashback and dicounts - get rewards
+            </h3>
             <p class="text-lg text-white">
               Excellent rates for exchanging, sending, and spending in 200+
               countries.
@@ -649,6 +644,182 @@
           </div>
         </div>
       </section>
+
+      <section class="mb-24 md:mb-28">
+        <h3 class="text-center mb-6">Our customers say it best.</h3>
+        <div
+          class="testimonials bg-secondaryColor py-8 w-full md:w-[85%] mx-auto carousel grid grid-flow-col gap-8 overflow-y-auto"
+        >
+          <div class="testimonial">
+            <img src="/Resources/question_mark.svg" alt="" />
+            <p class="leading py-6">
+              "They are able to help a startup like mine scale and are very
+              responsive to all of our unique needs."
+            </p>
+            <div class="testimonial-last flex items-center gap-6">
+              <img src="/Resources/Joew.png" alt="" />
+              <div class="testimonial-text">
+                <h5>Joew Harbert</h5>
+                <p class="text-[14px] text-gray-600">CEO, NoonBrew</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial bg-white">
+            <img src="/Resources/question_mark.svg" alt="" />
+            <p class="leading py-6">
+              “Division of Labor’s creative ideas were great, and working with
+              their team was truly easy they were very responsive.”
+            </p>
+            <div class="testimonial-last flex items-center gap-6">
+              <img src="/Resources/Mila.png" alt="" />
+              <div class="testimonial-text">
+                <h5>Mila McSabbu</h5>
+                <p class="text-[14px] text-gray-600">
+                  Marketing & Office Coordinator
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial">
+            <img src="/Resources/question_mark.svg" alt="" />
+            <p class="leading py-6">
+              “We were blown away when we saw. The combination of social, email,
+              knowledge base, mobile, ets.”
+            </p>
+            <div class="testimonial-last flex items-center gap-6">
+              <img src="/Resources/Robert.png" alt="" />
+              <div class="testimonial-text">
+                <h5>Robert Fox</h5>
+                <p class="text-[14px] text-gray-600">
+                  Owner, Beards of Brothers
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial">
+            <img src="/Resources/question_mark.svg" alt="" />
+            <p class="leading py-6">
+              “Division of Labor’s creative ideas were great, and working with
+              their team was truly easy they were very responsive.”
+            </p>
+            <div class="testimonial-last flex items-center gap-6">
+              <img src="/Resources/Mila.png" alt="" />
+              <div class="testimonial-text">
+                <h5>Mila McSabbu</h5>
+                <p class="text-[14px] text-gray-600">
+                  Marketing & Office Coordinator
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sliders flex items-center gap-2 justify-center mt-8">
+          <div class="slider active"></div>
+          <div class="slider"></div>
+          <div class="slider"></div>
+          <div class="slider"></div>
+        </div>
+      </section>
+
+      <section class="mb-24 md:mb-28 text-center">
+        <div class="w-full md:w-2/5 mx-auto my-5 grid gap-3">
+          <h3>Choose your plan</h3>
+          <p class="text-base text-white">
+            Both a free trial and a free set of features for anyone who wants to
+            use them.
+          </p>
+        </div>
+        <div class="pricings grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+          <div class="pricing grid gap-6 bg-white p-8 rounded-xl">
+            <h5>Basic</h5>
+            <h2 class="font-bold my-4 text-2xl">Free</h2>
+            <p class="text-base">
+              Save money spending abroad and monitor your savings with our
+              built-in budgeting options. Free to use.
+            </p>
+            <a
+              href="#"
+              class="inline-flex items-center justify-center px-8 py-3 font-semibold text-base bg-darkBlue text-white rounded-md"
+              >Get started</a
+            >
+          </div>
+          <div
+            class="pricing grid gap-6 bg-secondaryColor p-8 rounded-xl text-white"
+          >
+            <h5 class="text-white">Standard</h5>
+            <h2 class="font-bold my-4 text-2xl">$5.99/mon</h2>
+            <p class="text-base text-white">
+              Upgrade to a better version. Get more out of your money for less
+              than a price of a coffee.
+            </p>
+            <a
+              href="#"
+              class="inline-flex items-center justify-center px-8 py-3 font-semibold text-base bg-white text-secondaryColor rounded-md"
+              >Get started</a
+            >
+          </div>
+          <div class="pricing grid gap-6 bg-white p-8 rounded-xl">
+            <h5>Premium</h5>
+            <h2 class="font-bold my-4 text-2xl">$12.99/mon</h2>
+            <p class="leading">
+              Earn up to 1.95% interest daily on savings, crypto, cashback, and
+              so much more.
+            </p>
+            <a
+              href="#"
+              class="inline-flex items-center justify-center px-8 py-3 font-semibold text-base bg-darkBlue text-white rounded-md"
+              >Get started</a
+            >
+          </div>
+        </div>
+        <div class="mt-5">
+          <p class="text-base font-medium text-bodyFont">
+            Safe payments provided by Stripe. The standard VAT rate may be
+            charged, following the law of your country.
+          </p>
+        </div>
+      </section>
+
+      <section
+        class="hero__section mb-24 md:mb-28 flex items-center justify-between flex-col md:flex-row px-10 pt-10 md:pt-0 md:px-20 bg-primaryColor"
+      >
+        <div class="hero__section-left flex flex-col gap-5 text-white">
+          <h2 class="text-2xl text-white font-bold">Download our Fintech app</h2>
+          <p class="text-lg text-white">
+            With lots of unique blocks, you can easily build a page without
+            coding. Build your next landing page.
+          </p>
+          <div class="store flex items-center gap-4">
+            <a href="#"><img src="/Resources/Play.svg" alt="" /></a>
+            <a href="#"><img src="/Resources/Store.svg" alt="" /></a>
+          </div>
+        </div>
+
+        <div class="hero__section-right">
+          <img src="/Resources/Cartoon Phone.png" alt="" />
+        </div>
+      </section>
+
+      <section
+        class="hero__section mb-24 md:mb-28 flex items-center justify-between flex-col md:flex-row px-10 pt-10 md:pt-0 md:px-20 bg-darkBlue"
+      >
+        <div class="hero__section-right">
+          <img src="/Resources/newletter.png" alt="" />
+        </div>
+        <div class="hero__section-left flex flex-col gap-5 text-white">
+          <h2 class="text-2xl text-white font-bold">Download our Fintech app</h2>
+          <p class="text-lg text-white">
+            With lots of unique blocks, you can easily build a page without
+            coding. Build your next landing page.
+          </p>
+          <div class="store flex items-center gap-4">
+            <a href="#"><img src="/Resources/Play.svg" alt="" /></a>
+            <a href="#"><img src="/Resources/Store.svg" alt="" /></a>
+          </div>
+        </div>
+      </section>
     </main>
+
+    <script src="/index.js"></script>
   </body>
 </html>

@@ -16,7 +16,7 @@ module.exports = {
       },
       colors: {
         primaryColor: "#5A45FE",
-        secondaryColor: "#0F0B2E",
+        secondaryColor: "#5A45FE",
         bodyFont: "#0F0B2E",
         darkBlue: "rgb(15,23,42)",
       },
